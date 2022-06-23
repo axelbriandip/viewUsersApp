@@ -18,15 +18,26 @@ function App() {
   }
 
   // resultados
-  const nombreCompleto = users[pos].name.title + " " + users[pos].name.first + " " + users[pos].name.last + " pos: " + pos;
+  const nombreCompleto = `${users[pos].name.title} ${users[pos].name.first} ${users[pos].name.last}`;
   const foto = users[pos].picture.large;
+  const email = users[pos].email;
+  const telefono = users[pos].phone;
+  const ubicacion = `${users[pos].location.city}, ${users[pos].location.country}`;
 
   return (
     <div className="App" style={{backgroundColor: `#${colorRandom}`}}>
-      <h1>{nombreCompleto}</h1>
-      <img src={foto} alt="foto"/>
-      <button onClick={cambiarUsuario}>Cambiar user</button>
-      <span>{posRandom}</span>
+      <div className="card">
+        <span className='nombre' style={{color: `#${colorRandom}`}}>{nombreCompleto}</span>
+        <div className="contenedor-img">
+          <img src={foto} alt="foto"/>
+        </div>
+        <div className="info">
+          <span style={{color: `#${colorRandom}`}}>{email}</span>
+          <span style={{color: `#${colorRandom}`}}>{telefono}</span>
+          <span style={{color: `#${colorRandom}`}}>{ubicacion}</span>
+        </div>
+        <div className="boton-cambiar" onClick={cambiarUsuario} style={{backgroundColor: `#${colorRandom}`}}>C</div>
+      </div>
     </div>
   )
 }
