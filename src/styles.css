@@ -16,7 +16,7 @@
 .card {
   margin-top: 1rem;
   background-color: #fff;
-  width: 18rem;
+  width: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,4 +61,12 @@
   padding: .75rem;
   margin-top: 1rem;
   cursor: pointer;
+}
+
+.boton-cambiar i {
+  color: #eee;
+}
+
+.info i {
+  width: 1.5rem;
 }

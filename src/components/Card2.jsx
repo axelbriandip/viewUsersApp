@@ -25,11 +25,13 @@ const Card2 = () => {
                     <img src={foto} alt="foto"/>
                 </div>
                 <div className="info">
-                    <span style={{color: `#${color}`}}>{email}</span>
-                    <span style={{color: `#${color}`}}>{telefono}</span>
-                    <span style={{color: `#${color}`}}>{ubicacion}</span>
+                    <span style={{color: `#${color}`}}><i className="fa-solid fa-envelope"></i> {email}</span>
+                    <span style={{color: `#${color}`}}><i className="fa-solid fa-phone"></i> {telefono}</span>
+                    <span style={{color: `#${color}`}}><i className="fa-solid fa-location-dot"></i> {ubicacion}</span>
                 </div>
-                <div className="boton-cambiar" onClick={cambiarUsuario} style={{backgroundColor: `#${color}`}}>C</div>
+                <div className="boton-cambiar" onClick={cambiarUsuario} style={{backgroundColor: `#${color}`}}>
+                    <i class="fa-solid fa-recycle"></i>
+                </div>
             </div>
         </div>
     );
